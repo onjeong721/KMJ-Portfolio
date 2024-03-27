@@ -106,7 +106,28 @@ section#workprocess .wrap ul.work li h3{
   margin-bottom: 18px;
 }
 section#workprocess .wrap ul.work li p{
-  
   font-size: 17px;
   color: #444;
 }
+section#workprocess .slick-prev{
+  left: -50px;
+}
+section#workprocess .slick-next{
+  right: -35px;
+}
+section#workprocess .slick-prev::before{
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url(../img/pre.png) no-repeat center /contain;
+}
+
+section#workprocess .slick-next::before{
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url(../img/next.png) no-repeat center /contain;
+}
+
