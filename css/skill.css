@@ -1,0 +1,312 @@
+section#skill{
+  height: 100vh;
+  display: flex;
+  /*! align-items: center; */
+  /*! background-color: #f2ede3; */
+  padding-bottom: 100px;
+}
+section#skill .wrap{    
+  /*! grid-template-columns: auto auto; */
+  /*! display: grid; */
+  /*! justify-items: center; */
+  /*! align-items: center; */
+}
+section#skill .wrap p{  
+  grid-row: 2;
+  grid-column: 1 / span 4;
+  text-align: center;
+  color: #333;
+}
+section#skill .wrap >a{
+  justify-self: center;
+  align-self: center;
+  background-color: #7d7162;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+section#skill .wrap ul.skillList{
+  display: flex;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  gap: 20px;
+}
+section#skill .wrap ul.skillList li{
+
+  text-align: center;
+  line-height: 2;
+}
+section#skill .wrap ul.skillList li::before{
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: url(../img/s.jpg) no-repeat center /contain; 
+}
+section#skill .content{
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  background-color: #fbfbfb;
+  padding: 50px 0;
+  align-items: end;
+}
+
+section#skill .content  p{
+  width: fit-content;
+  padding-right: 20px;
+  font-size: 25px;
+}
+section#skill .content  ul{
+  text-align: center;
+  list-style: none;
+
+  font-weight: 1000;
+  flex-direction: column;
+  overflow: hidden;
+  height: 30px;
+  width: fit-content;
+  border-bottom: 2.25px solid black;
+}
+@keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-30px,0);}
+  33.32%,45.98% {transform:translate3d(0,-60px,0);}
+  49.98%,62.64% {transform:translate3d(0,-90px,0);}
+  66.64%,79.3% {transform:translate3d(0,-60px,0);}
+  83.3%,95.96% {transform:translate3d(0,-30px,0);}
+}
+section#skill .content  ul li{
+  font-size: 23px;
+  height: 30px;
+  animation-name: change;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+
+section#skill .wrap{
+  position: relative;
+  width: 1700px;
+  justify-content: start;
+  align-items: center;
+  padding-top: 100px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  height: fit-content;
+  justify-items: center;
+}
+section#skill .wrap h2{
+  grid-column: 2;
+}
+section#skill .wrap h2 a{
+  font-size: 20px;
+  color: #555;
+}
+section#skill .wrap ul.skillinner{
+  align-items: end;
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  grid-row: 3;
+  grid-column: 1 / span 4;
+}
+section#skill .wrap ul.skillinner >li{
+  width: calc(100% / 3);
+  text-align: center;
+  border-radius: 30px;
+}
+section#skill .wrap ul.skillinner li h3 {
+
+  display: grid;
+}
+section#skill .wrap ul.skillinner li h3 a{
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s;
+  padding: 0 30px;
+  text-align: center;
+  opacity: 0.5;
+  white-space: nowrap;
+}
+section#skill .wrap ul.skillinner li h3 a.clicklist{
+transform: scale(1.2);
+}
+section#skill .wrap ul.skillinner li h3 a::before{
+  content: "";
+  display: block;
+  width: 120px;
+  height: 120px;
+  background: no-repeat center /cover;
+  transition: 0.5s;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 80%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 70%;
+}
+section#skill .wrap ul.skillinner li h3 a.clicklist::before{
+  background-size: 200%;
+  /*! width: 150px; */
+  /*! height: 150px; */
+  /*! transform: scale(1.2); */
+}
+section#skill .wrap ul.skillinner li h3 a:hover::before{
+  background-size: 200%;
+}
+section#skill .wrap ul.skillinner li:nth-child(1) h3 a::before{
+ background-image: url(../img/html.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(2) h3 a::before{
+  background-image: url(../img/css.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(3) h3 a::before{
+  background-image: url(../img/java.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(4) h3 a::before{
+  background-image: url(../img/jq.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(5) h3 a::before{
+  background-image: url(../img/photo.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(6) h3 a::before{
+  background-image: url(../img/ill.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(7) h3 a::before{
+  background-image: url(../img/google.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(8) h3 a::before{
+  background-image: url(../img/git.jpg); 
+}
+section#skill .wrap ul.skillinner li p{
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  width: 70%;
+  flex-direction: initial;
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 50px;
+  transform: translate(-50%);
+  text-align: start;
+  font-size: 19px;
+  line-height: 1.6;
+}
+section#skill .wrap ul.skillinner li p::before{
+  display: block;
+  content: "";
+  width: 300px;
+  height: 300px;
+  background: no-repeat center /cover;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 80%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 70%;
+}
+section#skill .wrap ul.skillinner li:nth-child(1) p::before{
+  background-image: url(../img/html.jpg);
+}
+section#skill .wrap ul.skillinner li:nth-child(2) p::before{
+  background-image: url(../img/css.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(3) p::before{
+  background-image: url(../img/java.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(4) p::before{
+  background-image: url(../img/jq.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(5) p::before{
+  background-image: url(../img/photo.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(6) p::before{
+  background-image: url(../img/ill.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(7) p::before{
+  background-image: url(../img/google.jpg); 
+}
+section#skill .wrap ul.skillinner li:nth-child(8) p::before{
+  background-image: url(../img/git.jpg); 
+}
+section#skill .wrap ul.skillinner li:not(:first-child) p{
+  display: none;
+}
+section#skill .wrap ul.skillinner li ul.skilllist{ 
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  width: 90%;
+  flex-direction: initial;
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 50px;
+  transform: translate(-50%);
+}
+section#skill .wrap ul.skillinner li:not(:first-child) ul.skilllist{
+  display: none;
+}
+                                                                            section#skill .wrap ul.skillinner li ul.skilllist li{
+  line-height: 2;
+  font-size: 25px;
+  /*! border: 3px solid #f2ede3; */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 450px;
+  background-color: white;
+  /*! border-radius: 20px; */
+}
+section#skill .wrap ul.skillinner li:first-child ul.skilllist li h3::before{
+  display: block;
+  content: "";
+  width: 100%;
+  height: 200px;
+  background: no-repeat center /contain;
+}
+section#skill .wrap ul.skillinner li:first-child ul.skilllist li:nth-child(1) h3::before{
+  background-image: url(../img/html.jpg);
+}
+section#skill .wrap ul.skillinner li:first-child ul.skilllist li:nth-child(2) h3::before{
+  background-image: url(../img/CSS.jpg);
+}
+section#skill .wrap ul.skillinner li:first-child ul.skilllist li:nth-child(3) h3::before{
+  background-image: url(../img/java.jpg);
+}
+section#skill .wrap ul.skillinner li:first-child ul.skilllist li:nth-child(4) h3::before{
+  background-image: url(../img/jq.jpg);
+}
+section#skill .wrap ul.skillinner li ul.skilllist li h3{
+  border-bottom: 1px solid black;
+  grid-row: 2;
+}
+section#skill .wrap ul.skillinner li ul.skilllist li p{
+  font-size: 15px;
+  text-align: left;
+}
+section#skill .wrap ul.skillinner li ul.skilllist li a{
+  
+  font-size: 16px;
+  color: #666;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+
+.clicklist{
+  /*! border-bottom: 2px solid black; */
+  /*! background-color: #a79375; */
+  color: black;
+  opacity: 1 !important;
+}
+.addflex{
+  display: flex !important;
+}
+.paddingB{
+  padding-bottom: 300px;
+}
+.addgrid{
+  display: grid !important;
+}

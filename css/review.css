@@ -1,0 +1,49 @@
+section#review{
+   
+}
+section#review .wrap{
+   
+}
+section#review .wrap h2{
+   
+}
+section#review .wrap ul{
+   
+}
+section#review .wrap ul li{
+
+  width: 80%;
+  display: flex;
+}
+section#review .wrap ul li::after{
+  background: no-repeat top /cover;
+  content: "";
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-top-left-radius: 110%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 60%;
+  border-bottom-right-radius: 100%;
+}
+section#review .wrap ul li:nth-child(1)::after{
+  background-image: url(../img/smile-min.jpg);
+}
+section#review .wrap ul li:nth-child(2)::after{
+  
+}
+section#review .wrap ul li:nth-child(3)::after{
+  
+}
+section#review .wrap ul li:nth-child(4)::after{
+  
+}
+section#review .wrap ul li:nth-child(5)::after{
+  
+}
+section#review .wrap ul li h2{
+   
+}
+section#review .wrap ul li p{
+   
+}

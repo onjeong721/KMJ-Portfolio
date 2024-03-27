@@ -1,0 +1,79 @@
+footer {
+
+  background-color: #f6f0e9;
+}
+footer .wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
+}
+footer .wrap h2 {
+
+  justify-self: end;
+  grid-column: 3;
+  grid-row: 1;
+  font-size: 0;
+  background: url(../img/logo.png) no-repeat center /contain;
+  width: 100px;
+  height: 80px;
+  line-height: 80px;
+}
+footer .wrap ul.peasonal {
+  display: flex;
+  grid-column: 2;
+  grid-row: 2;
+}
+footer .wrap ul.peasonal li {
+
+}
+footer .wrap ul.peasonal li a {
+
+}
+footer .wrap address {
+  grid-column: 2;
+  grid-row: 3;
+
+}
+footer .wrap p.tk {
+  grid-column: 1;
+  grid-row: 1;
+
+  justify-self: start;
+}
+footer .wrap p.copy{
+  grid-row: 3;
+  grid-column: 2;
+}
+footer .wrap a{
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: start;
+}
+footer .wrap ul.sns {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  justify-self: start;
+}
+footer .wrap ul.sns h3 {
+
+}
+footer .wrap ul.sns h3 a {
+
+}
+footer .wrap ul.sns li {
+
+}
+footer .wrap ul.sns li a {
+
+}
+footer .wrap select {
+  grid-column: 3;
+  grid-row: 1;
+
+}
+footer .wrap select option {
+
+}/*# sourceMappingURL=footer.css.map */

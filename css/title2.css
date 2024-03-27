@@ -1,0 +1,188 @@
+#title2 {
+ 
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#title2 .wrap {
+  box-sizing: border-box;
+  padding-top: 50px;
+  /* position: relative; */
+}
+#title2 .wrap>h2{
+  line-height: 1.4;
+  font-size: 30px;
+  padding-left: 50px;
+  /*! color: #f9f1e3; */
+  position: absolute;
+  top: 20%;
+  z-index: -1;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  text-align: start;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  font-family: "Noto Sans KR", serif;
+}
+#title2 .wrap > h2::after{
+  display: block;
+  content: "";
+  background: url(../img/mean.png) no-repeat center /cover;
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  right: -22px;
+  top: 86px;
+  opacity: 0.5;
+}
+
+#title2 .wrap > h2 span{
+  font-size: 100px;
+  font-weight: initial;
+  font-family: "Noto Serif KR", serif;
+}
+#title2 .wrap ul.view{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: fit-content; 
+  /* width: 1700px;
+  height: 700px; */
+}
+#title2 .wrap .slick-dots{  
+  bottom: 0;
+  right: 310px;
+  display: flex;
+  width: fit-content;
+}
+#title2 .wrap ul.view li{
+  position: relative;
+}
+/* #title2 .wrap ul.view li:not(:first-child){
+   display: none; 
+} */
+#title2 .wrap ul.view li a::before{
+  display: inline-block;
+  content: "";
+  width: 90%;
+  height: 600px;
+  background: url(../img/back.jpg) no-repeat center /cover;
+  /*! opacity: 0.65; */
+  filter: brightness(80%);
+  grid-column: 2;
+  grid-row: 1 / span 8;
+  border-radius: 70%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 80%;
+  border-top-right-radius: 50%;
+  /*! border-bottom-right-radius: 80%; */
+  /* justify-self: center; */
+  /*! opacity: 0.9; */
+  /*! border-radius: 50%; */
+}
+#title2 .wrap ul.view li:hover::before{
+  opacity: 1;
+  filter: brightness(100%);
+}
+#title2 .wrap ul.view li:nth-child(1) a::before{
+  background-image: url(../img/sp.png);
+}
+#title2 .wrap ul.view li:nth-child(2) a::before{
+  background-image: url(../img/sm.png);
+}
+#title2 .wrap ul.view li:nth-child(3) a::before{
+  background-image: url(../img/fl.png);
+}
+#title2 .wrap ul.view li:nth-child(4) a::before{
+  background-image: url(../img/wt.png);
+}
+#title2 .wrap ul.view li >a{
+  display: grid;
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(7, auto);
+  /*! align-items: end; */
+  row-gap: 10px;
+}
+#title2 .wrap ul.view li a:first-child{
+  padding-left: 0;
+}
+#title2 .wrap ul.view li a h2{
+  font-size: 20px;
+  grid-column: 3;
+  grid-row: 5;
+  align-self: start;
+  position: relative;
+  line-height: 1;
+  text-align: left;
+  /*! justify-self: end; */
+  opacity: 0.5;
+}
+#title2 .wrap ul.view li a h2::after{
+  content: "";
+  display: inline-block;
+  width: 350px;
+  height: 200px;
+  background: no-repeat center /cover;
+  position: absolute;
+  left: -80px;
+  z-index: -1;
+  top: -95px;
+  opacity: 0.8;
+}
+#title2 .wrap ul.view li:nth-child(1) a h2::after{
+  background-image: url(../img/backspring.png);
+}
+#title2 .wrap ul.view li:nth-child(2) a h2::after{
+  background-image: url(../img/backsummer.png);
+}
+#title2 .wrap ul.view li:nth-child(3) a h2::after{
+  background-image: url(../img/backfall.png);
+}
+#title2 .wrap ul.view li:nth-child(4) a h2::after{
+  background-image: url(../img/backwinter.png);
+}
+#title2 .wrap ul.view li a p{
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 320;
+  grid-column: 3;
+  grid-row: 7;
+  text-align: left;
+}
+#title2 .wrap ul.view li a p br{
+  display: none;
+}
+#title2 .wrap ul.view li a span{
+  grid-column: 3;
+  grid-row: 6;
+  color: #666;
+  text-align: left;
+}
+aside{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #f6f0e9;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+}
+aside a{  
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 20px;
+  letter-spacing: 3.2px;
+  align-items: center;
+}
+aside a span{
+  font-size: 16px;
+  grid-column: 3;
+  color: #755c40;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+}

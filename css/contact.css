@@ -1,0 +1,81 @@
+section#contact{
+
+}
+section#contact .wrap{
+
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  row-gap: 30px;
+}
+section#contact .wrap h2{
+  grid-row: 1;
+  grid-column: 1 / span 3;
+}
+section#contact .wrap p{
+  grid-column: 1 / span 3;
+}
+section#contact .wrap img{
+  height: 452px;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 80%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 80%;
+  grid-row: 3;
+  grid-column: 1;
+}
+section#contact .wrap ul{
+
+  grid-column: 2;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  grid-row: 3;
+}
+section#contact .wrap ul li{
+
+}
+section#contact .wrap ul li a{
+  font-size: 22px;
+  padding: 8px 50px;
+  display: block;
+}
+section#contact .wrap ul li a::before{
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: no-repeat center /contain;
+  vertical-align: -15px;
+  margin-right: 10px;
+}
+section#contact .wrap ul li:nth-child(1) a::before{
+  background-image: url(../img/email.png);
+}
+section#contact .wrap ul li:nth-child(2) a::before{
+  background-image: url(../img/instar.png);
+}
+section#contact .wrap ul li:nth-child(3) a::before{
+  background-image: url(../img/blog.png);
+}
+section#contact .wrap ul li:nth-child(4) a::before{
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/kakaoicon.png);
+}
+section#contact .wrap ul li:nth-child(4) a::after { 
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-image: url(../img/kakaoqr.png);
+  background-size: contain;
+}
+section#contact .wrap a{
+
+}

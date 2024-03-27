@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김민정의 포트폴리오</title>
+    <!-- //구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <!-- 구글폰트// -->
+    <!-- 프리텐다드 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <!-- https://ionic.io/ionicons/v1 -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/title2.css">
+    <!-- <link rel="stylesheet" href="css/peasonal.css"> -->
+    <link rel="stylesheet" href="css/personal2.css">
+    <link rel="stylesheet" href="css/coding.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/workprocess.css">
+    <link rel="stylesheet" href="css/review.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //헤더 스크롤하면 레이아웃 변경
+            var headerH=$("header").height();
+            $("#title2").css("padding-top",headerH);
+            $(window).scroll(function(){
+                $("header .wrap .sidecantainer").slideUp();
+                $("header .wrap > a").removeClass("close");
+                if($(window).scrollTop()>$("header").height()){//
+                    //header에 클래스 추가
+                    $("header").addClass("headerFix");
+                    $("header .wrap ul.profile li > a").addClass("font0");
+                }else{
+                    //body에 스타일을 지정하시오(paading-top값에 header높이값을 지정)
+                    $("body").css("padding-top","0");
+                    $("header").removeClass("headerFix");
+                    $("header .wrap ul.profile li > a").removeClass("font0");
+            }});
+            // ***헤더
+            //메뉴 닫기
+            $("header .wrap > a").click(function(){
+                $(this).toggleClass("close");
+                $("header .wrap .sidecantainer").slideToggle();
+                return false;
+            });
+            //스킬앤툴 버튼
+            $("section#skill .wrap ul.skillinner li:first-child h3 a").addClass("clicklist");
+            $("section#skill .wrap ul.skillinner li h3 a").click(function(){
+                $(this).parents("li").children().show().addClass("addgrid");
+                $(this).parents("li").siblings().children("p").hide().removeClass("addgrid");
+                $(this).addClass("clicklist");
+                $(this).parents("li").siblings().children("h3").children("a").removeClass("clicklist");
+                return false;
+            });
+        //반응형 768
+            if($(window).width()<=768){
+                $("section#skill").addClass("paddingB");
+                $("section#skill .wrap ul.skillinner li:first-child h3 a").click(function(){
+                    $("section#skill").addClass("paddingB");
+                });
+                $("section#skill .wrap ul.skillinner li:not(:first-child) h3 a").click(function(){
+                    $("section#skill").removeClass("paddingB");
+                });
+            };
+            // 메뉴클릭시 해당컨텐츠로 페이지스크롤
+            c1p=$("#personal").offset().top; 
+			c2p=$("#skill").offset().top;
+            c3p=$("#workprocess").offset().top;
+			c4p=$("#coding").offset().top;
+            c5p=$("#responsive").offset().top;
+            c6p=$("#contact").offset().top;
+            
+			// 메뉴클릭시 해당컨텐츠로 페이지스크롤
+			$("header .wrap ul.nav li:nth-child(1),header .wrap .sidecantainer .sidemenu > ul.side >li:nth-child(1)").click(function(){
+				$("html,body").animate({scrollTop:c1p},2000);
+                $("header .wrap .sidecantainer").slideUp();
+                $("header .wrap > a").removeClass("close");
+                return false;
+			});
+			$("header .wrap ul.nav li:nth-child(2),header .wrap .sidecantainer .sidemenu > ul.side >li:nth-child(2)").click(function(){
+				$("html,body").animate({scrollTop:c2p},2000);
+                $("header .wrap .sidecantainer").slideUp();
+                $("header .wrap > a").removeClass("close");
+                return false;
+			});
+			$("header .wrap ul.nav li:nth-child(3),header .wrap .sidecantainer .sidemenu ul.side li.sideH:nth-child(2) ul.sideinner li:nth-child(2) a").click(function(){
+				$("html,body").animate({scrollTop:c3p},2000);
+                $("header .wrap .sidecantainer").slideUp();
+                $("header .wrap > a").removeClass("close");
+                return false;
+			});
+            $("header .wrap ul.nav li:nth-child(4),header .wrap .sidecantainer .sidemenu > ul.side >li:nth-child(3)").click(function(){
+				$("html,body").animate({scrollTop:c4p},2000);
+                $("header .wrap .sidecantainer").slideUp();
+                $("header .wrap > a").removeClass("close");
+                return false;
+			});
+            $("header .wrap ul.nav li:nth-child(5),header .wrap .sidecantainer .sidemenu > ul.side >li:nth-child(3),header .wrap .sidecantainer .sidemenu ul.side li.sideH:nth-child(3) ul.sideinner li:nth-child(2) a").click(function(){
+				$("html,body").animate({scrollTop:c5p},2000);
+                $("header .wrap .sidecantainer").slideUp();
+                $("header .wrap > a").removeClass("close");
+                return false;
+			});
+            $("header .wrap ul.nav li:nth-child(6),header .wrap .sidecantainer .sidemenu ul.side li:nth-child(4)").click(function(){
+				$("html,body").animate({scrollTop:c6p},2000);
+                $("header .wrap .sidecantainer").slideUp();
+                $("header .wrap > a").removeClass("close");
+                return false;
+			});
+			//스크롤 이벤트
+			/* $(window).scroll(function(){
+				if($(window).scrollTop()>=c1p-$(window).height()){
+					$("div#area1 h2").addClass("bigsize");
+					$("div#area1 h2").parent().siblings().children("h2").removeClass("bigsize");
+				}
+				if($(window).scrollTop()>=c2p-$(window).height()){
+					$("div#area2 h2").addClass("bigsize");
+					$("div#area2 h2").parent().siblings().children("h2").removeClass("bigsize");
+				}
+				if($(window).scrollTop()>=c3p-$(window).height()){
+					$("div#area3 h2").addClass("bigsize");
+					$("div#area3 h2").parent().siblings().children("h2").removeClass("bigsize");
+				}
+				
+			});
+            */
+        });
+    </script>
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+            $('#title2 .wrap ul.view').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                autoplay: true,
+                fade: true,
+                dots: true
+            });
+            $('#personal .wrap .stiker').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                dots: true
+            });
+            $('section#workprocess .wrap .art').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false,
+                dots: true
+            });
+            $('section#workprocess .wrap .img').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                fade: true,
+                infinite: true
+            });
+            // $('.personAni').slick({
+            //     slidesToShow: 1,
+            //     slidesToScroll: 1,
+            //     infinite: false,
+            //     centerMode: true,
+            //     centerPadding: '60px'
+            // });
+            $('.work').slick({
+                slidesToShow: 4.2,
+                slidesToScroll: 2,
+                infinite: false,
+                dots: true
+            });
+        });
+    </script>
+    <!-- 마우스휠 -->
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".box";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 800, complete: function () {
+                        }
+                    });
+                });
+            });
+            
+            $("main>section").unwrap();
+            $("section").css("height:100%","box-sizing:border-box");
+        }
+    </script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+         $(document).ready(function () {
+            AOS.init();
+        });
+        </script>
+</head>
+<body>
+   <!-- 헤더 -->
+    <header>
+        <div class="wrap flex" class="box">
+            <h1><a href="">김민정</a></h1>
+            <a href="">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <ul class="nav">
+                <li><a href="#personal">Profile</a></li>
+                <li><a href="#coding">Skill</a></li>
+                <li><a href="#skill">workprocess</a></li>
+                <li><a href="#skill">portfolio1</a></li>
+                <li><a href="#responsive">portfolio2</a></li>
+                <li><a href="#coding">Contact</a></li>
+            </ul>
+            <div class="sidecantainer">
+                <div class="sidemenu">
+                    <img src="img/now.JPG" alt="김민정의 프로필 이미지">
+                    <p>안녕하세요.<br>신입 웹퍼블리셔 김민정입니다.</p>
+                    <ul class="side">
+                        <li class="sideH">
+                            <h3><a href="">Profile</a></h3>
+                            <ul class="sideinner">
+                                <li><a href="">about</a></li>
+                                <li><a href="">Education</a></li>
+                                <li><a href="">Experience&Hobby</a></li>
+                            </ul>
+                        </li>
+                        <li class="sideH">
+                            <h3><a href="">Work</a></h3>
+                            <ul class="sideinner">
+                                <li><a href="">SKill</a></li>
+                                <li><a href="">Work Process</a></li>
+                            </ul>
+                        </li>
+                        <li class="sideH">
+                            <h3><a href="">Portfolio</a></h3>
+                            <ul class="sideinner">
+                                <li><a href="">PC</a></li>
+                                <li><a href="">Responsive</a></li>
+                            </ul>
+                        </li>
+                        <li class="sideH">
+                            <h3><a href="">Contact</a></h3>
+                            <ul class="sideinner">
+                                <li><a href="">E-mail</a></li>
+                                <li><a href="">Instagram</a></li>
+                                <li><a href="">Blog</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                
+        </div>
+    </header>
+    <!-- 타이틀 -->
+    <div id="title2" class="box">
+        <div class="wrap">
+            <h2>의미를 찾아가는 신입웹퍼블리셔 김민정입니다.<br>저와 사계절을 함께할 곳을 찾습니다.</h2>
+            <ul class="view">
+                <li>
+                    <a href="">
+                        <h2>Spring</h2>
+                        <p>연분홍 꽃을 피우며 한 해의 시작을 알리는 봄,<br>먼 길을 돌아 새로운 여정을 시작하려 합니다.</p>
+                        <span>#신입웹퍼블리셔 #주니어 #국비지원</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h2>Summer</h2>
+                        <p>여름이면 생각나는 끝없이 펼쳐진 바다,<br>바다를 보며 이해심을 배웁니다.</p>
+                        <span>#차분한 #예의를 갖춘 #역지사지</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h2>Fall</h2>
+                        <p>가을의 새빨간 단풍처럼,<br>온정의 시간은 익어갑니다.</p>
+                        <span>#성장 #배움 #열정</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h2>Winter</h2>
+                        <p>첫 눈, 연말처럼 기다려지는<br>난로같은 마음씨와 함께합니다.</p>
+                        <span>#책임감 #배려심있는</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <!-- 퍼스널 수정보완 -->
+        <section id="personal" class="">
+            <div class="wrap" data-aos="fade-right">
+                <h2 class="cat">Profile</h2>
+                <ul class="list personAni">
+                    <li class="profile" data-aos="flip-up">
+                        <h3>김민정/ 1997.07 (28세)/ 성남시 거주</h3>
+                        <img src="img/self.png" alt="김민정의 프로필이미지2" >
+                        <p>안녕하세요, 저는 화할 민(旼) 나무바를 정(柾)<br>주변 사람들과 원만한 대인관계를 맺고 <span>정직하며 성실한 김민정</span>입니다. 나무같이 <span>차분하고 침착한 성격</span>을 강점으로, <span>꼼꼼하고 주도적인 업무태도</span>를 가졌습니다. 전문적인 지식에 욕심이 생겨 웹 퍼블리셔 준비를 시작했고, <span>키보드를 두드리는 감각, 그리고 금새 화려한 웹페이지가 펼쳐지는 코딩의 매력에 빠져버렸습니다.</span> 항상 열려있는 자세로 배움의 준비가 되어있습니다. 다양한 웹 사이트를 구축하며 <span>잡학다식한 웹퍼블리셔</span>가 되는 것이 목표입니다.</p>
+                    </li>
+                    <li class="edu" data-aos="fade-right">
+                        <h3>Education</h3>
+                        <img src="img/edu.jpg" alt="강의">
+                        <ul>
+                            <li>모란 이젠 IT아카데미 UX/UI 웹디자인 with 유튜브동영상 반응형 웹 <span>2023.11.01 ~ 2024.03.20</span></li>
+                            <li>하이미이어탱크 포토샵&일러스트(GTQ+GTQi) 그래픽디자인 <span>2023.02.15 ~ 2023.03.17</span></li>
+                        </ul>
+                        <p class="hide">하이미디어탱크<br>모란이젠아카데미</p>
+                    </li>
+                    <li class="hobby" data-aos="fade-left">
+                        <h3>Experience&Hobby</h3>
+                        <img src="img/barista.jpg" alt="아르바이트">
+                        <ul>
+                            <li>#카페 아르바이트 #봉사활동</li>
+                            <li>#등산 #운동</li>
+                            <li>#낙천적인 #습득력이 빠른</li>
+                        </ul>
+                        <p class="hide"></p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 스킬 -->
+        <section id="skill" class="box">
+            <div class="wrap">
+                <h2 class="cat">SKILL&TOOL</h2>
+                <p class="pp">4개월간 학습한 과목입니다.</p>
+                <a href="https://www.notion.so/137221d9a57d409faf1d6614a9badd96?v=560e7c1421bd41f1a4d6918bcbbfa27d"  target="_blank">학습 과정 보기</a>
+                <ul class="skillinner flex">
+                    <li>
+                        <h3><a href="">HTML</a></h3>
+                        <p  data-aos="flip-left">
+                            HTML 문서의 구조와 요소에 대한 속성(attribute)을 이해하고 시맨틱(의미적인) 요소를 적절하게 사용할 수 있습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3><a href="">CSS</a></h3>
+                        <p  data-aos="flip-left">
+                            CSS 선택자(selector)를 이해하고 요소를 선택하여 스타일을 적용하고 레이아웃을 조정하고 박스의 크기와 간격을 조정할 수 있습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3><a href="">Javascript</a></h3>
+                        <p  data-aos="flip-left">
+                            제이쿼리를 이해하고 다양한 방법으로 제이쿼리파일을 웹문서에 연결하여 제이쿼리 기본구조를 작성하여 스크립트를 시작합니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3><a href="">jquery</a></h3>
+                        <p  data-aos="flip-left">
+                            요소에 이벤트 핸들러를 추가하고, 클릭, 변경 등 다양한 이벤트를 연결하고 하수필터 선택자를 사용하여 선택자를 탐색할  수 있습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3><a href="">photoshop</a></h3>
+                        <p  data-aos="flip-left">
+                            레이어 기능을 통해 여러 이미지를 결합하거나 특정 부분을 겹쳐 표현하는 등의 작업, 웹 페이지에 사용할 이미지를 최적화, 이미지를 다양한 파일 형식으로 내보내는 기능을 활용하여 웹 페이지에서 필요한 형식에 맞게 이미지를 편집할 수 있습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3><a href="">illustrator</a></h3>
+                        <p  data-aos="flip-left">
+                            로고, 아이콘, 버튼, 일러스트레이션 등의 그래픽 요소를 제작 또는 수정하고 웹 페이지에서 사용할 텍스트 요소를 스타일링할 수 있습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3><a href="">google drive</a></h3>
+                        <p  data-aos="flip-left">
+                            구글 드라이브의 모바일 앱을 통해 언제 어디서나 파일에 접근하고 편집할 수 있는 편리함이 장점이 있어, 이를 통해 작업에 필요한 문서, 이미지 등을 업로드 또는 다운로드 받으며 작업 현황과 일지를 기록해 파일 관리 및 협업에 이용합니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3><a href="">github</a></h3>
+                        <p  data-aos="flip-left">
+                            프로젝트를 배포하고 호스팅, 또 이력을 관리하고 다른 팀원과 협업하기 용이한 깃허브를 활용하여 프로젝트를 공유하고, 프로젝트 설명을 위한 리드미를 작성합니다.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- workprocess -->
+        <section id="workprocess" class="box vh100" >
+            <div class="wrap" >
+                <h2 class="cat" div data-aos="fade-right" data-aos-delay="250">Work process</h2>
+                <p class="pp" div data-aos="fade-right" data-aos-delay="250" class="pp">시멘틱 마크업과 UI/UX를 중점으로 잡업한 과정을 설명합니다.</p>
+                <ul class="work flex" data-aos="fade-left" data-aos-delay="250">
+                    <li class="process">
+                        <span>01</span>
+                        <h3>벤치마킹 사이트 분석</h3>
+                        <p>웹사이트 '지디웹'을 통해 디자인클론코딩 할 사이트를 선정합니다.</p>
+                    </li>
+                    <li class="process">
+                        <span>02</span>
+                        <h3>기초데이터 수집</h3>
+                        <p>필요한 이미지 등을 디지털 디자인 소프트웨어를 활용하여 편집하고, 화면 구성 요소, 아이콘, 서체를 수집합니다.</p>
+                    </li>
+                    <li class="process">
+                        <span>03</span>
+                        <h3>디자인 컨셉 도출</h3>
+                        <p>전반적인 레이아웃 설계와 서비스, 제작물의 통합적인 아이덴티티를 고려하여 디자인 가이드를 조합합니다.</p>
+                    </li>
+                    <li class="process">
+                        <span>04</span>
+                        <h3>아이디어스케치</h3>
+                        <p>구글시트, 카카오오븐을 활용하여 와이어프레임, 스토리보드, 초안, 시안작업을 통해 디자인 스타일, 컬러, 서체 등을 구체화합니다.</p>
+                    </li>
+                    <li class="process">
+                        <span>05</span>
+                        <h3>트렌드와 경쟁사 홈페이지 분석</h3>
+                        <p>트렌드 분석을 통해 전략적인 콘셉트를 확보합니다. 또한 프로젝트 관련 디자인 개발에 필요한 요소를 파악하고 인터페이스(interface) 필요 요소와 항목들을 분석하기 위해 경쟁 홈페이지들의 장단점을 조사 분석합니다.</p>
+                    </li>
+                    <li class="process">
+                        <span>06</span>
+                        <h3>웹 퍼블리싱</h3>
+                        <p>디자인에 중요한 요소인 폰트와 이미지를 수집합니다.</p>
+                    </li>
+                    <li class="process">
+                        <span>07</span>
+                        <h3>수정 및 보완</h3>
+                        <p>초기 로딩 속도와 검색 엔진 최적화를 위한 요소 등 웹사이트의 성능과 품질을 다시 한번 확인합니다.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 디자인클론코딩 -->
+        <section id="coding" class="box vh100">
+            <div class="wrap" >
+                <h2 class="cat" data-aos="fade-up">Design Clone Coding</h2>
+                <p class="pp" data-aos="fade-up" class="pp">코딩 작업 숙지를 위한 디자인클론코딩 작업물 입니다.<br>쇼핑/ 생활가전/ 금융서비스/ 통신 등 다양한 기업홈페이지를 벤치마킹했습니다.</p>
+                <ul data-aos="fade-up" data-aos-delay="250">
+                    <li>
+                        <h3>파르팟</h3>
+                        <a href="https://onjeong721.github.io/parpot/"  target="_blank">
+                            <h3>파르팟</h3>
+                            <p>작업기간: 2023.11<br>
+                                형태: 개인작업 100%<br></p>
+                        </a>
+                    </li>
+                    <li>
+                        <h3>뉴트리불렛</h3>
+                        <a href="https://onjeong721.github.io/Nutribullet/"  target="_blank">
+                            <h3>뉴트리불렛</h3>
+                            <p>작업기간: 2023.12<br>
+                                형태: 개인작업 100%<br></p>
+                        </a>
+                    </li>
+                    <li>
+                        <h3>ks벽지</h3>
+                        <a href="https://onjeong721.github.io/kswallcoverings/"  target="_blank">
+                            <h3>ks벽지</h3>
+                            <p>작업기간: 2024.01<br>
+                                형태: 개인작업 100%<br></p>
+                        </a>
+                    </li>
+                    <li>
+                        <h3>HB PAPER</h3>
+                        <a href="https://onjeong721.github.io/HBPAPER/"  target="_blank">
+                            <h3>HB PAPER</h3>
+                            <p>작업기간: 2023.12<br>
+                                협업 프로젝트<br></p>
+                        </a>
+                    </li>
+                    <li>
+                        <h3>애경산업</h3>
+                        <a href="https://onjeong721.github.io/Aekyung/"  target="_blank">
+                            <h3>애경산업</h3>
+                            <p>작업기간: 2024.01<br>
+                                형태: 개인작업 100%<br></p>
+                        </a>
+                    </li>
+                    <li>
+                        <h3>ACCUNIQ</h3>
+                        <a href=" https://onjeong721.github.io/ACCUNIQ/"  target="_blank">
+                            <h3>ACCUNIQ</h3>
+                            <p>작업기간: 2023.01<br>
+                                형태: 협업 프로젝트<br></p>
+                        </a>
+                    </li>
+                    <li>
+                        <h3>아이리버</h3>
+                        <a href="https://onjeong721.github.io/iriver/"  target="_blank">
+                            <h3>아이리버</h3>
+                            <p>작업기간: 2024.01<br>
+                            형태: 개인작업 100%<br></p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 반응형페이지 -->
+        <section id="responsive" class="box vh100">
+            <div class="wrap" >
+                <h2 class="cat" data-aos="fade-up">Responsive</h2>
+                <p class="pp" data-aos="fade-up" class="pp">PC에 최적화된 웹사이트를<br>핸드폰과 태블릿에서도 사용할 수 있도록 반응형 웹사이트를 제작하였습니다.</p>
+                <ul class="re">
+                    <li>
+                        <a href="https://onjeong721.github.io/NICE-PAYMENTS/"  target="_blank">
+                            <img src="img/pay.png" alt="나이스페이먼츠" data-aos="zoom-in" data-aos-delay="250">
+                            <h3>NICE PAYMENTS</h3>
+                            <span>개인100%<br>제작기간:3일</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://onjeong721.github.io/HITEJINRO/ "  target="_blank">
+                            <img src="img/wine.png" alt="하이트진로" data-aos="zoom-in" data-aos-delay="250">
+                            <h3>HITEJINRO</h3>
+                            <span>개인100%<br>제작기간:1주일</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://onjeong721.github.io/HB-PAPER-RENEWAL/"  target="_blank">
+                            <img src="img/bag.png" alt="HB페이퍼" data-aos="zoom-in" data-aos-delay="250">
+                            <h3>HB PAPER (Renewal)</h3>
+                            <span>개인100%<br>제작기간:2일</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://onjeong721.github.io/Bworld/"  target="_blank">
+                            <img src="img/Bworld.png" alt="비월드" data-aos="zoom-in" data-aos-delay="250">
+                            <h3>B world</h3>
+                            <span>개인100%<br>제작기간:2일</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 컨텍트 -->
+        <section id="contact" class="vh100">
+            <div class="wrap column" data-aos="zoom-out-up">
+                <h2 class="cat">CONTACT</h2>
+                <p class="pp">저의 포트폴리오를 방문해주셔서 진심으로 감사드립니다.<br>제가 더 궁금하시다면 아래 링크를 참고하시고, 편하게 연락주시길바랍니다.</p>
+                <img src="img/now.JPG" alt="김민정의 프로필사진">
+                <ul class="flex">
+                    <li><a href="mailto:onjeong0721@gmail.com?body=감사합니다. 아래에 원하시는 내용을 입력해주세요.">onjeong0721@gmail.com</a></li>
+                    <li><a href="https://www.instagram.com/onjeong721/?hl=ko" target="_blank">@onjeong0721</a></li>
+                    <li><a href="https://721onjung.tistory.com/" target="_blank">T story blog</a></li>
+                    <li><a href="https://open.kakao.com/o/sIOzMqig" target="_blank">카카오톡</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <!-- 푸터 -->
+    <footer class="box">
+        <div class="wrap">
+            <h2>kimminjeong</h2>
+            <p class="tk">thankyou for visiting</p>
+            <p class="copy">ⓒ 2024. (kimminjeong) all rights reserved.</p>
+        </div>
+    </footer>
