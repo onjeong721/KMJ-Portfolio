@@ -2,7 +2,7 @@
 <img src="https://github.com/onjeong721/Portfolio/assets/150096277/e83796ce-d64a-4f05-86fe-ca38edbe4152" width="80%" height="auto"/>
 
 ## 프로젝트 소개
- * 프로젝트 사이트: https://onjeong721.github.io/Portfolio/
+ * 프로젝트 사이트: https://onjeong721.github.io/KMJ-Portfolio/
 <br>
 
 ## 참여
@@ -29,7 +29,7 @@
 
 ## 반응형 모바일 화면
 * 모바일 <br>
-![모바일](https://github.com/onjeong721/Bworld/assets/150096277/c3b595a4-b118-4d85-a953-4ad54e162ddd)
+![모바일](https://github.com/onjeong721/KMJ-Portfolio/assets/150096277/99e9f532-2eab-45a6-9377-745b08ff506f)
 <br>
 
 ## 프로젝트 구조
