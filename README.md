@@ -29,7 +29,7 @@
 
 ## 반응형 모바일 화면
 * 모바일 <br>
-![모바일](https://github.com/onjeong721/Bworld/assets/150096277/c3b595a4-b118-4d85-a953-4ad54e162ddd)
+![모바일](https://github.com/onjeong721/KMJ-Portfolio/assets/150096277/99e9f532-2eab-45a6-9377-745b08ff506f)
 <br>
 
 ## 프로젝트 구조
