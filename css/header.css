@@ -2,7 +2,6 @@ header {
   height: fit-content;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid #f4f4f4;
   background-color: #f2ede3;
   position: fixed !important;
   width: 100%;

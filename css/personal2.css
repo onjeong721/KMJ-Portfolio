@@ -10,7 +10,6 @@ section#personal .wrap {
   padding: 100px 0;
 }
 section#personal .wrap h2 {
-
   position: absolute;
   top: 47px;
   font-size: 60px;
@@ -78,6 +77,23 @@ section#personal .wrap ul.list li:nth-child(2){
   align-items: center;
   justify-items: start;
   width: 100%;
+}
+section#personal .wrap ul.list li:nth-child(2) ul li:nth-child(3) a{
+  justify-self: center;
+  align-self: center;
+  background-color: #7d7162;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 50px;
+}
+section#personal .wrap ul.list li:nth-child(2) ul li:nth-child(3) a::before{
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/arrow3hW.png) no-repeat center /contain;
+  vertical-align: -5px;
+  margin-right: 8px;
 }
 section#personal .wrap ul.list >li:nth-child(3){
   justify-items: center;
@@ -193,6 +209,9 @@ section#personal .wrap ul.list li:nth-child(3) ul{
 }
 section#personal .wrap ul.list li ul li {
 
+}
+section#personal .wrap ul.list li ul li:nth-child(3){
+  margin-top: 20px;
 }
 section#personal .wrap ul.list li ul li span{
   

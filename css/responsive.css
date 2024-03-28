@@ -9,8 +9,14 @@ section#responsive .wrap{
   width: 1530px;
 }
 section#responsive .wrap h2{
+
 }
 section#responsive .wrap >p{
+
+}
+section#responsive .wrap >p span{
+  
+  font-weight: bold;
 }
 section#responsive .wrap ul.re{
   justify-content: space-between;

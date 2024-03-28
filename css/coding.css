@@ -8,11 +8,16 @@ section#coding .wrap{
   width: 1440px;
 }
 section#coding .wrap h2{
+
 }
 section#coding .wrap >p{
+
+}
+section#coding .wrap >p span{
+
+  font-weight: bold;
 }
 section h2{
-  
   font-weight: 600;
 }
 section#coding .wrap ul{
