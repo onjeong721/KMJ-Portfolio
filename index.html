@@ -42,12 +42,15 @@
                     //header에 클래스 추가
                     $("header").addClass("headerFix");
                     $("header .wrap ul.profile li > a").addClass("font0");
+                    $("footer .wrap >a").show();
                 }else{
                     //body에 스타일을 지정하시오(paading-top값에 header높이값을 지정)
                     $("body").css("padding-top","0");
                     $("header").removeClass("headerFix");
                     $("header .wrap ul.profile li > a").removeClass("font0");
-            }});
+                    $("footer .wrap >a").hide();
+                 }
+        });
             // ***헤더
             //메뉴 닫기
             $("header .wrap > a").click(function(){
@@ -596,6 +599,7 @@
     <footer class="box">
         <div class="wrap">
             <h2>kimminjeong</h2>
+            <a href="#title2">TOP</a>
             <p class="tk">thankyou for visiting</p>
             <p class="copy">ⓒ 2024. (kimminjeong) all rights reserved.</p>
         </div>
