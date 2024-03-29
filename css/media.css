@@ -134,8 +134,8 @@
   }
   section#personal .wrap ul.list li img{
     grid-row: 2;
-    width: 100%;
-    height: 100%;
+    width: 340px;
+    height: 350px;
     grid-column: 1 !important;
   }
   section#personal .wrap ul.list li ul li{
@@ -250,10 +250,28 @@
   flex-direction: column;
   overflow: hidden;
   align-items: center;
+  padding-bottom: 300px !important;
+  }
+  section#workprocess .wrap > ul.work{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    bottom: 0;
+    height: 300px;
+  }
+  section#workprocess .wrap .slick-dots{
+    width: 340px;
+    left: 10px;
+  }
+  section#workprocess .slick-prev{
+    display: none;
+  }
+  section#workprocess .slick-next{
+    display: none;
   }
   section#workprocess .wrap ul.work li.process{
     width: 250px !important;
-    height: 250px !important;
+    height: 300px !important;
   }
   section#workprocess .wrap ul.work li h3{
     font-size: 18px;
@@ -356,7 +374,7 @@
     width: 75px;
     height: 75px;
   }
-  footer .wrap > a{
+  footer .wrap span{
     display: none !important;;
   }
   footer .wrap p.tk{

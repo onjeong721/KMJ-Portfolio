@@ -13,19 +13,15 @@
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <!-- https://ionic.io/ionicons/v1 -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
-    <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/title.css">
     <link rel="stylesheet" href="css/title2.css">
-    <!-- <link rel="stylesheet" href="css/peasonal.css"> -->
     <link rel="stylesheet" href="css/personal2.css">
     <link rel="stylesheet" href="css/coding.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/skill.css">
     <link rel="stylesheet" href="css/workprocess.css">
-    <link rel="stylesheet" href="css/review.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/contact.css">
@@ -42,13 +38,13 @@
                     //header에 클래스 추가
                     $("header").addClass("headerFix");
                     $("header .wrap ul.profile li > a").addClass("font0");
-                    $("footer .wrap >a").show();
+                    $("footer .wrap span").show();
                 }else{
                     //body에 스타일을 지정하시오(paading-top값에 header높이값을 지정)
                     $("body").css("padding-top","0");
                     $("header").removeClass("headerFix");
                     $("header .wrap ul.profile li > a").removeClass("font0");
-                    $("footer .wrap >a").hide();
+                    $("footer .wrap span").hide();
                  }
         });
             // ***헤더
@@ -599,7 +595,10 @@
     <footer class="box">
         <div class="wrap">
             <h2>kimminjeong</h2>
-            <a href="#title2">TOP</a>
+            <span>
+                <a href="https://github.com/onjeong721" target="_blank" class="github">Github</a>
+                <a href="#title2" class="top">TOP</a>
+            </span>
             <p class="tk">thankyou for visiting</p>
             <p class="copy">ⓒ 2024. (kimminjeong) all rights reserved.</p>
         </div>

@@ -210,7 +210,7 @@ section#personal .wrap ul.list li:nth-child(3) ul{
 section#personal .wrap ul.list li ul li {
 
 }
-section#personal .wrap ul.list li ul li:nth-child(3){
+section#personal .wrap ul.list li:nth-child(2) ul li:nth-child(3){
   margin-top: 20px;
 }
 section#personal .wrap ul.list li ul li span{
