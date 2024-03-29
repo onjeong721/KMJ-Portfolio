@@ -356,6 +356,9 @@
     width: 75px;
     height: 75px;
   }
+  footer .wrap > a{
+    display: none !important;;
+  }
   footer .wrap p.tk{
     grid-row: 2;
     justify-self: initial;
