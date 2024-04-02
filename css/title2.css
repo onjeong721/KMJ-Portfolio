@@ -1,5 +1,4 @@
 #title2 {
- 
   height: 100vh;
   display: flex;
   align-items: center;
@@ -9,7 +8,7 @@
   padding-top: 50px;
   /* position: relative; */
 }
-#title2 .wrap>h2{
+#title2 .wrap >h2{
   line-height: 1.4;
   font-size: 30px;
   padding-left: 50px;
@@ -24,7 +23,7 @@
   opacity: 0.6;
   font-family: "Noto Sans KR", serif;
 }
-#title2 .wrap > h2::after{
+#title2 .wrap >h2::after{
   display: block;
   content: "";
   background: url(../img/mean.png) no-repeat center /cover;
